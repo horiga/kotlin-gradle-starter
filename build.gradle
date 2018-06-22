@@ -49,13 +49,14 @@ dependencyManagement {
 dependencies {
     compile "org.jooby:jooby-lang-kotlin"
     compile "org.jooby:jooby-netty"
+    compile "io.netty:netty-transport-native-epoll:${dependencyManagement.importedProperties['netty.version']}:${osdetector.classifier.contains('linux') ? 'linux-x86_64' : ''}"
     compile "io.netty:netty-tcnative-boringssl-static:${dependencyManagement.importedProperties['boringssl.version']}:${osdetector.classifier}"
 
     testCompile "org.jetbrains.spek:spek-api:$spekVersion"
     testRuntime "org.jetbrains.spek:spek-junit-platform-engine:$spekVersion"
     testCompile "org.junit.platform:junit-platform-launcher:$junitPlatformVersion"
     testCompile "org.amshove.kluent:kluent:1.35"
-    testCompile "io.rest-assured:rest-assured:3.0.7"
+    testCompile "io.rest-assured:rest-assured:3.1.0"
 }
 
 /** We diverge from the default resources structure to adopt the Jooby standard: */
