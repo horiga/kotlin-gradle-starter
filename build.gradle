@@ -3,7 +3,7 @@ buildscript {
         kotlinVersion = "1.2.41"
         junitPlatformVersion = "1.0.0"
         spekVersion = "1.1.5"
-        joobyVersion = "1.4.0"
+        joobyVersion = "1.4.1"
     }
 
     repositories {
