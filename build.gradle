@@ -40,11 +40,6 @@ version "1.0"
 mainClassName = "starter.kotlin.AppKt"
 sourceCompatibility = 1.8
 
-task wrapper(type: Wrapper) {
-    gradleVersion = "4.6"
-    distributionType = org.gradle.api.tasks.wrapper.Wrapper.DistributionType.ALL
-}
-
 dependencyManagement {
     imports {
         mavenBom "org.jooby:jooby-bom:$joobyVersion"
